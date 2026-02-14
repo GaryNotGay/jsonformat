@@ -13,7 +13,7 @@ function base64Encode() {
     try {
         const encoded = btoa(unescape(encodeURIComponent(input)));
         output.textContent = encoded;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '编码失败：' + error.message, 'error');
     }
@@ -31,7 +31,7 @@ function base64Decode() {
     try {
         const decoded = decodeURIComponent(escape(atob(input)));
         output.textContent = decoded;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '解码失败：输入的Base64格式不正确', 'error');
     }
@@ -55,7 +55,7 @@ function generateMD5() {
     try {
         const hash = MD5(input);
         output.textContent = hash;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '生成失败：' + error.message, 'error');
     }
@@ -249,7 +249,7 @@ function generateSHA256() {
     try {
         const hash = SHA256(input);
         output.textContent = hash;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '生成失败：' + error.message, 'error');
     }
@@ -412,7 +412,7 @@ function aesEncrypt() {
         // 使用简单的异或加密（实际应用中应该使用真正的AES库）
         const encrypted = simpleEncrypt(input, key);
         output.textContent = encrypted;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '加密失败：' + error.message, 'error');
     }
@@ -436,7 +436,7 @@ function aesDecrypt() {
     try {
         const decrypted = simpleDecrypt(input, key);
         output.textContent = decrypted;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '解密失败：请检查密钥是否正确', 'error');
     }
@@ -481,7 +481,7 @@ function urlEncode() {
     try {
         const encoded = encodeURIComponent(input);
         output.textContent = encoded;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '编码失败：' + error.message, 'error');
     }
@@ -499,7 +499,7 @@ function urlDecode() {
     try {
         const decoded = decodeURIComponent(input);
         output.textContent = decoded;
-        output.style.color = '#00f';
+        output.style.color = '#0ff';
     } catch (error) {
         showMessage(output, '解码失败：输入的URL格式不正确', 'error');
     }
@@ -524,7 +524,7 @@ function showMessage(element, message, type) {
             element.style.color = '#ffc107';
             break;
         default:
-            element.style.color = '#00f';
+            element.style.color = '#0ff';
     }
 }
 
